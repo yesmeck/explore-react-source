@@ -30,7 +30,6 @@ module.exports = function override(config, env) {
     config.module.rules,
     rule => {
       if (rule.use && loaderNameMatches(rule.use[0], 'eslint-loader')) {
-        console.log(rule);
         config.module.rules.splice(config.module.rules.indexOf(rule), 1);
       }
     },
